@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/Flipstack-client/static/css/main.98e0def5.css",
+    "main.js": "/Flipstack-client/static/js/main.d07321fb.js",
+    "static/media/c1.jpg": "/Flipstack-client/static/media/c1.4ccbe398f5c24d631163.jpg",
+    "static/media/d6.png": "/Flipstack-client/static/media/d6.e2d6b3bc73541e41121f.png",
+    "static/media/d1.png": "/Flipstack-client/static/media/d1.2dfeb3d50dc162cc39b6.png",
+    "static/media/d2.png": "/Flipstack-client/static/media/d2.fa32e130807edeef22bd.png",
+    "static/media/d5.png": "/Flipstack-client/static/media/d5.24736d4d2b76748a296b.png",
+    "static/media/d3.png": "/Flipstack-client/static/media/d3.9197a22deb5d67a7684c.png",
+    "static/media/d4.png": "/Flipstack-client/static/media/d4.c13c1ebf9207db767709.png",
+    "static/media/c2.jpg": "/Flipstack-client/static/media/c2.e86162dff902ab9d9466.jpg",
+    "static/media/p8.jpg": "/Flipstack-client/static/media/p8.2ef65b1afc2e0eba490e.jpg",
+    "static/media/c3.jpg": "/Flipstack-client/static/media/c3.6c26866361967d29416f.jpg",
+    "static/media/p11.jpg": "/Flipstack-client/static/media/p11.f2a44c595beef858d2c8.jpg",
+    "static/media/p1.jpg": "/Flipstack-client/static/media/p1.bf77e942edc8a39f2c6d.jpg",
+    "static/media/p14.jpg": "/Flipstack-client/static/media/p14.63776ab33c7dab7557b8.jpg",
+    "static/media/b3.jpg": "/Flipstack-client/static/media/b3.c13993a11a6863d0fd7b.jpg",
+    "static/media/p4.jpg": "/Flipstack-client/static/media/p4.8eaa141d3c116e480637.jpg",
+    "static/media/pp.jpg": "/Flipstack-client/static/media/pp.a3924afe5c6caaa46faa.jpg",
+    "static/media/b4.jpg": "/Flipstack-client/static/media/b4.08f273b0812dca66a381.jpg",
+    "static/media/b7.jpg": "/Flipstack-client/static/media/b7.dcc9f3d7fa81a707bfc2.jpg",
+    "static/media/printer.jpg": "/Flipstack-client/static/media/printer.fa907101931564e797b9.jpg",
+    "static/media/p7.jpg": "/Flipstack-client/static/media/p7.8f7fa4b5f15d3ac03647.jpg",
+    "static/media/b8.jpg": "/Flipstack-client/static/media/b8.8b4515ebf578315a3087.jpg",
+    "static/media/b5.jpg": "/Flipstack-client/static/media/b5.25d34f8e6b9c3b4d3054.jpg",
+    "static/media/b6.jpg": "/Flipstack-client/static/media/b6.ccb7f723b6e7befce591.jpg",
+    "static/media/a5.jpg": "/Flipstack-client/static/media/a5.aefee32c8a61e0d938a1.jpg",
+    "static/media/b1.jpg": "/Flipstack-client/static/media/b1.0c3f1aab48494edf2a39.jpg",
+    "static/media/b2.jpg": "/Flipstack-client/static/media/b2.f7c6e0a9106763af82c3.jpg",
+    "static/media/p6.jpeg": "/Flipstack-client/static/media/p6.8ffd11847b5f4c0c01eb.jpeg",
+    "index.html": "/Flipstack-client/index.html",
+    "main.98e0def5.css.map": "/Flipstack-client/static/css/main.98e0def5.css.map",
+    "main.d07321fb.js.map": "/Flipstack-client/static/js/main.d07321fb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.98e0def5.css",
+    "static/js/main.d07321fb.js"
+  ]
+}
