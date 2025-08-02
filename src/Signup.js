@@ -20,7 +20,7 @@ const Signup = () => {
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/signup', user);
+      const res = await axios.post('https://flipstack-server.onrender.com/signup', user);
       alert(res.data.message || "Signup successful");
     } catch (err) {
       alert(err.response?.data?.message || "Signup failed");

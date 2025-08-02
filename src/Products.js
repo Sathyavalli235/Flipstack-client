@@ -28,6 +28,7 @@ import prod22 from './images/p12.jpg';
 import prod23 from './images/p14.jpg';
 import prod24 from './images/p16.jpg';
 import prod25 from './images/p20.jpg';
+import axios from 'axios';
 
 
 const Products = () => {
@@ -37,11 +38,62 @@ const [isLoggedIn, setIsLoggedIn] = useState(false);
 
 useEffect(() => {
   const user = localStorage.getItem("isLoggedIn"); // or use a context if you have
+  const userId = JSON.parse(localStorage.getItem("userinfo"))._id ;
+  console.log(JSON.parse(localStorage.getItem("userinfo"))._id);
+
+  axios
+  .get(`http://localhost:5000/api/cart/get`)
+  .then(res => {
+    const allCartData = res.data;
+
+    // Filter by current user
+    const userCartItems = allCartData
+      .filter(item => item.userId === userId)
+      .map(item => item.product);
+
+    // Pass each product to addToCart
+    userCartItems.forEach(product => {
+      addToCart(product);
+    });
+
+    console.log("Cart products added:", userCartItems);
+    })
+  .catch(err => {
+    console.error("Error fetching cart data", err);
+  });
+
   setIsLoggedIn(!!user); // set to true if user exists
+  // if (user && user._id && cartItems.length > 0) {
+  //   addToCart(product);
+  // }
+
+  // console.log(axios.get('http://localhost:5000/api/cart/get').then(d => d.data.map(d => d)).catch(err => err))
 }, []);
-const handleAddToCart = (product) => {
+// const handleAddToCart = (product) => {
+//   if (!isLoggedIn) {
+//     alert("Please login to add items to the cart.");
+//     return;
+//   }
+
+//   const cleanedProduct = {
+//     ...product,
+//     price: Number(String(product.price).replace(/[^\d.]/g, '')),
+//     originalPrice: Number(String(product.originalPrice).replace(/[^\d.]/g, '')),
+//   };
+
+//   addToCart(cleanedProduct);
+//   alert(`${product.name} added to cart!`);
+// };
+
+const handleAddToCart = async (product) => {
   if (!isLoggedIn) {
     alert("Please login to add items to the cart.");
+    return;
+  }
+
+  const user = JSON.parse(localStorage.getItem("userinfo")); // get logged-in user info
+  if (!user || !user._id) {
+    alert("User info not found.");
     return;
   }
 
@@ -51,8 +103,17 @@ const handleAddToCart = (product) => {
     originalPrice: Number(String(product.originalPrice).replace(/[^\d.]/g, '')),
   };
 
-  addToCart(cleanedProduct);
-  alert(`${product.name} added to cart!`);
+  try {
+    await axios.post('http://localhost:5000/api/cart/add', {
+      userId: user._id,
+      product: cleanedProduct
+    });
+    alert(`${product.name} added to cart!`);
+    // addToCart(cleanedProduct);
+  } catch (err) {
+    console.error("Error adding to cart:", err);
+    alert("Failed to add item to cart.");
+  }
 };
 
 const handleBuyNow = (product) => {

@@ -18,7 +18,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/contact', form);
+      const res = await axios.post('https://flipstack-server.onrender.com/contact', form);
       alert(res.data.message);
       setForm({ name: '', email: '', message: '' });
     } catch (err) {
