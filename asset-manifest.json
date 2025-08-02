@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Flipstack-client/static/css/main.f07a9a8a.css",
-    "main.js": "/Flipstack-client/static/js/main.aab004fc.js",
+    "main.js": "/Flipstack-client/static/js/main.23f03271.js",
     "static/media/c1.jpg": "/Flipstack-client/static/media/c1.4ccbe398f5c24d631163.jpg",
     "static/media/d6.png": "/Flipstack-client/static/media/d6.e2d6b3bc73541e41121f.png",
     "static/media/d1.png": "/Flipstack-client/static/media/d1.2dfeb3d50dc162cc39b6.png",
@@ -31,10 +31,10 @@
     "static/media/p6.jpeg": "/Flipstack-client/static/media/p6.8ffd11847b5f4c0c01eb.jpeg",
     "index.html": "/Flipstack-client/index.html",
     "main.f07a9a8a.css.map": "/Flipstack-client/static/css/main.f07a9a8a.css.map",
-    "main.aab004fc.js.map": "/Flipstack-client/static/js/main.aab004fc.js.map"
+    "main.23f03271.js.map": "/Flipstack-client/static/js/main.23f03271.js.map"
   },
   "entrypoints": [
     "static/css/main.f07a9a8a.css",
-    "static/js/main.aab004fc.js"
+    "static/js/main.23f03271.js"
   ]
 }
