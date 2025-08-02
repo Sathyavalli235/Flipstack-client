@@ -85,11 +85,9 @@ export const CartProvider = ({ children }) => {
     );
   };
 
-  const clearCart = () => {
-    setCartItems([]);
-    // Keep the user's cart stored, don't remove from localStorage
-  };
-
+const clearCart = () => setCartItems([]);
+    
+   
   const getTotalPrice = () =>
     cartItems.reduce((acc, item) => acc + Number(item.price) * Number(item.quantity), 0);
 

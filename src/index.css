@@ -29,6 +29,18 @@
     font-size: 11px;
   }
 }
+.carousel-item img {
+  height: 500px; /* Desktop height */
+  object-fit: cover;
+  width: 100%;
+}
+
+/* 📱 Mobile responsive */
+@media (max-width: 768px) {
+  .carousel-item img {
+    height: 250px; /* Smaller height for mobile */
+  }
+}
 
 
 

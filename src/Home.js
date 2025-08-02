@@ -349,7 +349,7 @@ const Home = () => {
           <p>Contact Us</p>
           <p>About Us</p>
           <p>Careers</p>
-          <p>Flipkart Stories</p>
+          <p>FlipStack Stories</p>
           <p>Press</p>
           <p>Corporate Information</p>
         </div>
@@ -379,7 +379,7 @@ const Home = () => {
         <div>
           <h6>Mail Us:</h6>
           <p>
-            Flipkart Internet Private Limited,<br />
+            FlipStack Internet Private Limited,<br />
             Buildings Alyssa, Begonia &<br />
             Clove Embassy Tech Village,<br />
             Outer Ring Road,<br />
@@ -398,7 +398,7 @@ const Home = () => {
         <div>
           <h6>Registered Office Address:</h6>
           <p>
-            Flipkart Internet Private Limited,<br />
+            FlipStack Internet Private Limited,<br />
             Buildings Alyssa, Begonia &<br />
             Clove Embassy Tech Village,<br />
             Outer Ring Road,<br />
@@ -420,7 +420,7 @@ const Home = () => {
           <p>Advertise</p>
           <p>Gift Cards</p>
           <p>Help Center</p>
-          <p>© 2007-2025 Flipkart.com</p>
+          <p>© 2007-2025 FlipStack.com</p>
         </div>
         <div className="payment-icons">
           <img src="https://img.icons8.com/color/48/visa.png" alt="Visa" />
