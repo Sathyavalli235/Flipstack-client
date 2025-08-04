@@ -12,20 +12,27 @@ import Payment from './Payment';
 import './index.css';
 
 function App() {
-  const { cartItems, clearCart } = useCart();
+  const { cartItems, clearCart, reloadCart } = useCart();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate(); // ✅ Now it will work
 
   useEffect(() => {
     const storedStatus = localStorage.getItem("isLoggedIn");
     setIsLoggedIn(storedStatus === "true");
+    
   }, []);
+
+  useEffect(() => {
+    isLoggedIn && reloadCart();
+  },[cartItems,isLoggedIn])
+
   
 
  const handleLogout = () => {
-  localStorage.removeItem("isLoggedIn");
+  localStorage.setItem("isLoggedIn", "false");
   localStorage.removeItem("userinfo");
   clearCart();
+  reloadCart();
   setIsLoggedIn(false);
   navigate("/"); // ✅ This now works correctly
 };
@@ -51,7 +58,7 @@ function App() {
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/cart">
-                  🛒Cart <span className="badge bg-dark">{cartItems.length}</span>
+                  🛒Cart { isLoggedIn && <span className="badge bg-dark">{cartItems.length}</span> }
                 </Link>
               </li>
               <li className="nav-item">
