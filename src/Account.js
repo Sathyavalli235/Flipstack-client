@@ -10,28 +10,50 @@ const Account = () => {
       setUserData(JSON.parse(storedUser));
     }
   }, []);
+const getInitials = (name) => {
+    if (!name) return '';
+    return name
+      .slice(0, 2)
+      .toUpperCase();
+  };
 
   return (
     <>
-    <div className="container mt-5">
-      <h2>Account Details</h2>
-      {userData ? (
-        <div className="card p-3">
-          <p><strong>Name:</strong> {userData.name}</p>
-          <p><strong>Email:</strong> {userData.email}</p>
-          {userData.phone && <p><strong>Phone:</strong> {userData.phone}</p>}
-          {userData.address && <p><strong>Address:</strong> {userData.address}</p>}
-          {userData.createdAt && (
-            <p><strong>Joined:</strong> {new Date(userData.createdAt).toLocaleDateString()}</p>
-          )}
-          
-
-        </div>
-      ) : (
-        <p>You are not logged in.</p>
-      )}
-    </div>
-       <footer className="footer-container">
+      <div className="container mt-5">
+        <h2>Account Details</h2>
+        {userData ? (
+          <div className="account-card d-flex align-items-center p-4 shadow rounded" style={{ backgroundColor: "#fff" }}>
+            <div className="user-details col-md-8">
+              <p><strong>Name:</strong> {userData.name}</p>
+              <p><strong>Email:</strong> {userData.email}</p>
+              {userData.phone && <p><strong>Phone:</strong> {userData.phone}</p>}
+              {userData.address && <p><strong>Address:</strong> {userData.address}</p>}
+              {userData.createdAt && (
+                <p><strong>Joined:</strong> {new Date(userData.createdAt).toLocaleDateString()}</p>
+              )}
+            </div>
+            <div className="user-initials col-md-4 d-flex justify-content-center align-items-center">
+              <div style={{
+                width: '100px',
+                height: '100px',
+                borderRadius: '50%',
+                backgroundColor: '#1976d2',
+                color: '#fff',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontSize: '32px',
+                fontWeight: 'bold',
+              }}>
+                {getInitials(userData.name)}
+              </div>
+            </div>
+          </div>
+        ) : (
+          <p>You are not logged in.</p>
+        )}
+      </div>
+       <footer className="footer-container mt-2">
                 <div className="footer-top">
                   <div>
                     <h6>ABOUT</h6>
