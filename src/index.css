@@ -10,6 +10,22 @@
   width: 260px;
 }
 
+.account-card {
+  display: flex;
+  flex-wrap: wrap;
+  background: #f9f9f9;
+  margin-top: 20px;
+  border: 1px solid #ddd;
+}
+.user-details {
+  flex: 1;
+}
+.user-initials {
+  min-width: 120px;
+  padding: 10px;
+}
+
+
 /* 🌐 Mobile View */
 @media (max-width: 768px) {
   .carousel-overlay {
