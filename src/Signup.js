@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Signup.css';
 import axios from 'axios';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Signup = () => {
   const [user, setUser] = useState({
@@ -17,11 +18,15 @@ const Signup = () => {
     setUser({ ...user, [e.target.name]: e.target.value });
   };
 
+  const navigate = useNavigate();
+
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
       const res = await axios.post('https://flipstack-server.onrender.com/signup', user);
       alert(res.data.message || "Signup successful");
+      navigate('/login');
+
     } catch (err) {
       alert(err.response?.data?.message || "Signup failed");
     }
@@ -67,7 +72,7 @@ const Signup = () => {
         </div>
 
         <p className="text-center mt-3">
-          Already have an account? <a href="/login">Login</a>
+          Already have an account? <Link to="/login">Login</Link>
         </p>
       </form>
     </div>

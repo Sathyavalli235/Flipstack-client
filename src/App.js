@@ -20,6 +20,7 @@ function App() {
     const storedStatus = localStorage.getItem("isLoggedIn");
     setIsLoggedIn(storedStatus === "true");
   }, []);
+  
 
  const handleLogout = () => {
   localStorage.removeItem("isLoggedIn");
