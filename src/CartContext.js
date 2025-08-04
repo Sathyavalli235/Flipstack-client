@@ -22,7 +22,7 @@ export const CartProvider = ({ children }) => {
       if (userInfo?._id !== userId) setUserId(userInfo?._id || null);
 
       if (isUserLoggedIn && userInfo?._id) {
-        const res = await axios.get(`http://localhost:5000/api/cart/get/${userInfo._id}`);
+        const res = await axios.get(`https://flipstack-server.onrender.com/api/cart/get/${userInfo._id}`);
         setCartItems(res.data || []);
       } else {
         const savedCart = localStorage.getItem(`cart_${key}`);
@@ -75,7 +75,7 @@ export const CartProvider = ({ children }) => {
       setCartItems(updated);
 
       if (isLoggedIn && userId) {
-        await axios.post("http://localhost:5000/api/cart/update", {
+        await axios.post("https://flipstack-server.onrender.com/api/cart/update", {
           userId,
           productId: item.id,
           quantity: 1,
@@ -87,7 +87,7 @@ export const CartProvider = ({ children }) => {
       setCartItems(updated);
 
       if (isLoggedIn && userId) {
-        await axios.post("http://localhost:5000/api/cart/add", {
+        await axios.post("https://flipstack-server.onrender.com/api/cart/add", {
           userId,
           product: cleanedItem
         });
@@ -99,7 +99,7 @@ export const CartProvider = ({ children }) => {
   const removeFromCart = async (id) => {
     setCartItems(prev => prev.filter(p => p.id !== id));
     if (isLoggedIn && userId) {
-      await axios.delete(`http://localhost:5000/api/cart/remove/${userId}/${id}`);
+      await axios.delete(`https://flipstack-server.onrender.com/api/cart/remove/${userId}/${id}`);
     }
   };
 
@@ -109,7 +109,7 @@ export const CartProvider = ({ children }) => {
       prev.map(p => p.id === id ? { ...p, quantity: p.quantity + 1 } : p)
     );
     if (isLoggedIn && userId) {
-      await axios.post("http://localhost:5000/api/cart/update", {
+      await axios.post("https://flipstack-server.onrender.com/api/cart/update", {
         userId,
         productId: id,
         quantity: 1,
@@ -128,7 +128,7 @@ export const CartProvider = ({ children }) => {
       )
     );
     if (isLoggedIn && userId) {
-      await axios.post("http://localhost:5000/api/cart/update", {
+      await axios.post("https://flipstack-server.onrender.com/api/cart/update", {
         userId,
         productId: id,
         quantity: 1,
@@ -141,7 +141,7 @@ export const CartProvider = ({ children }) => {
   // const clearCart = async () => {
   //   setCartItems([]);
   //   if (isLoggedIn && userId) {
-  //     await axios.delete(`http://localhost:5000/api/cart/clear/${userId}`);
+  //     await axios.delete(`https://flipstack-server.onrender.com/api/cart/clear/${userId}`);
   //   }
   // };
 

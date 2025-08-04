@@ -11,7 +11,7 @@ const Cart = () => {
   useEffect(() => {
     if (user?._id) {
       axios
-        .get(`http://localhost:5000/api/cart/get/${user._id}`)
+        .get(`https://flipstack-server.onrender.com/api/cart/get/${user._id}`)
         .then((res) => setCartItems(res.data))
         .catch((err) => console.error("Cart fetch error", err));
     }
@@ -29,7 +29,7 @@ const Cart = () => {
 
   const updateQuantity = async (cartId, quantity) => {
     try {
-      await axios.put(`http://localhost:5000/api/cart/update/${cartId}`, { quantity });
+      await axios.put(`https://flipstack-server.onrender.com/api/cart/update/${cartId}`, { quantity });
       setCartItems(prev =>
         prev.map(item =>
           item._id === cartId ? { ...item, product: { ...item.product, quantity } } : item
@@ -42,7 +42,7 @@ const Cart = () => {
 
   const removeFromCart = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/cart/delete/${id}`);
+      await axios.delete(`https://flipstack-server.onrender.com/api/cart/delete/${id}`);
       setCartItems(prev => prev.filter(item => item._id !== id));
     } catch (err) {
       console.error("Remove error", err);

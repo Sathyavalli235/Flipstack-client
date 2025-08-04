@@ -31,7 +31,7 @@ function App() {
   const fetchCartData = async () => {
     const userId = JSON.parse(localStorage.getItem("userinfo")) ;
     if(userId) {
-      const res = await axios.get('http://localhost:5000/api/cart/get');
+      const res = await axios.get('https://flipstack-server.onrender.com/api/cart/get');
       const data = res.data
       const cartItem1 = data.filter(item => item.userId === userId._id).map(i => i.product)
       cartItem1.forEach(p => {
@@ -163,7 +163,7 @@ useEffect(() => {
   //   addToCart(product);
   // }
 
-  // console.log(axios.get('http://localhost:5000/api/cart/get').then(d => d.data.map(d => d)).catch(err => err))
+  // console.log(axios.get('https://flipstack-server.onrender.com/api/cart/get').then(d => d.data.map(d => d)).catch(err => err))
 }, []);
 // const handleAddToCart = (product) => {
 //   if (!isLoggedIn) {
@@ -200,7 +200,7 @@ const handleAddToCart = async (product) => {
   };
 
   try {
-    await axios.post('http://localhost:5000/api/cart/add', {
+    await axios.post('https://flipstack-server.onrender.com/api/cart/add', {
       userId: user._id,
       product: cleanedProduct
     });

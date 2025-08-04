@@ -57,7 +57,7 @@ const handleAddToCart = async (product) => {
   };
 
   try {
-    await axios.post("http://localhost:5000/api/cart/add", {
+    await axios.post("https://flipstack-server.onrender.com/api/cart/add", {
       userId: user._id,
       product: cleanedProduct,
     });

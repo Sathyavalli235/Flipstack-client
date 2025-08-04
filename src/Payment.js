@@ -11,7 +11,7 @@ const Payment = () => {
       try {
         if (user?._id) {
           const res = await axios.get(
-            `http://localhost:5000/api/cart/get/${user._id}`
+            `https://flipstack-server.onrender.com/api/cart/get/${user._id}`
           );
           setCartItems(res.data);
         }
