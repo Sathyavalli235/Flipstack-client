@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Flipstack-client/static/css/main.f07a9a8a.css",
-    "main.js": "/Flipstack-client/static/js/main.23f03271.js",
+    "main.css": "/Flipstack-client/static/css/main.e51b6921.css",
+    "main.js": "/Flipstack-client/static/js/main.8fe30235.js",
     "static/media/c1.jpg": "/Flipstack-client/static/media/c1.4ccbe398f5c24d631163.jpg",
     "static/media/d6.png": "/Flipstack-client/static/media/d6.e2d6b3bc73541e41121f.png",
     "static/media/d1.png": "/Flipstack-client/static/media/d1.2dfeb3d50dc162cc39b6.png",
@@ -30,11 +30,11 @@
     "static/media/b2.jpg": "/Flipstack-client/static/media/b2.f7c6e0a9106763af82c3.jpg",
     "static/media/p6.jpeg": "/Flipstack-client/static/media/p6.8ffd11847b5f4c0c01eb.jpeg",
     "index.html": "/Flipstack-client/index.html",
-    "main.f07a9a8a.css.map": "/Flipstack-client/static/css/main.f07a9a8a.css.map",
-    "main.23f03271.js.map": "/Flipstack-client/static/js/main.23f03271.js.map"
+    "main.e51b6921.css.map": "/Flipstack-client/static/css/main.e51b6921.css.map",
+    "main.8fe30235.js.map": "/Flipstack-client/static/js/main.8fe30235.js.map"
   },
   "entrypoints": [
-    "static/css/main.f07a9a8a.css",
-    "static/js/main.23f03271.js"
+    "static/css/main.e51b6921.css",
+    "static/js/main.8fe30235.js"
   ]
 }
