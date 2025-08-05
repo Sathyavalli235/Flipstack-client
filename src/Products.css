@@ -7,15 +7,18 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  justify-content: center; /* Center items for better responsiveness */
 }
 
 .product-card {
-  width: 250px;
+  width: 100%;
+  max-width: 250px;
   border: 1px solid #ddd;
   border-radius: 10px;
   padding: 10px;
   text-align: center;
   background: #f9f9f9;
+  flex: 1 1 100%;
 }
 
 .product-image {
@@ -33,20 +36,23 @@
 .original-price {
   color: #999;
   margin-left: 8px;
+  text-decoration: line-through;
 }
 
 .product-buttons {
   margin-top: 10px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column; /* Stack buttons on mobile */
+  gap: 10px;
 }
 
 .btn-cart,
 .btn-buy {
-  padding: 8px 12px;
+  padding: 10px;
   border: none;
   border-radius: 6px;
   cursor: pointer;
+  font-size: 16px;
 }
 
 .btn-cart {
@@ -56,4 +62,24 @@
 .btn-buy {
   background-color: #fa6338;
   color: white;
+}
+
+/* ============================
+   🔧 Mobile Specific Styling
+=============================== */
+@media (min-width: 600px) {
+  .product-card {
+    flex: 1 1 calc(50% - 40px); /* 2 items per row */
+  }
+}
+
+@media (min-width: 900px) {
+  .product-card {
+    flex: 1 1 calc(33.33% - 40px); /* 3 items per row */
+  }
+
+  .product-buttons {
+    flex-direction: row; /* side-by-side buttons on larger screens */
+    justify-content: space-between;
+  }
 }

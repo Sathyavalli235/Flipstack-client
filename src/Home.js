@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Card, Button } from "react-bootstrap";
 import { FaFacebookF, FaTwitter, FaYoutube, FaInstagram } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-
+import { Link } from 'react-router-dom';
 
 
 import c1 from './images/c1.jpg';
@@ -99,7 +99,7 @@ const Home = () => {
               <p>Chimneys</p>
             </div>
           </div>
-          <a href="/products" className="see-all">See all offers</a>
+          <Link to="/products" className='see-all'>see all offers</Link>
         </div>
 
         <div className="deal-box">
@@ -122,7 +122,7 @@ const Home = () => {
               <p>Improvement</p>
             </div>
           </div>
-          <a href="/products" className="see-all">See all offers</a>
+          <Link to="/products" className='see-all'>see all offers</Link>
         </div>
          <div className="deal-box full-banner">
   <h5>Most awaited launches of the year | Join Prime now</h5>
@@ -131,7 +131,7 @@ const Home = () => {
       <img src={pp} alt="Launch Banner" />
     </div>
   </div>
-  <a href="/products" className="see-all">See all deals</a>
+          <Link to="/products" className='see-all'>see all deals</Link>
 </div>
 
           <div className="deal-box">
@@ -154,7 +154,7 @@ const Home = () => {
               <p>DJI </p>
             </div>
           </div>
-          <a href="/products" className="see-all">See all offers</a>
+          <Link to="/products" className='see-all'>see all offers</Link>
         </div>
          <div className="deal-box full-banner">
   <h5>Up to 60% off | Amazon Renewed</h5>
@@ -163,7 +163,7 @@ const Home = () => {
       <img src={printer} alt="Launch Banner" />
     </div>
   </div>
-  <a href="/products"className="see-all">See all deals</a>
+          <Link to="/products" className='see-all'>see all deals</Link>
 </div>
 <div className="deal-box furniture-section">
   <h5>🔥 Top Deals 🔥</h5>
