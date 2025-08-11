@@ -53,6 +53,21 @@ import d4 from './images/d4.png';
 import d5 from './images/d5.png';
 import d6 from './images/d6.png';
 import './index.css';
+import matress from './images/matress.jpeg';
+import sofa from './images/sofa.jpeg';
+import office from './images/office .jpeg';
+import tv from './images/tv .jpeg';
+import baby from './images/baby.jpeg';
+import iron from './images/iron.jpeg';
+import table from './images/table.jpeg';
+import shoe from './images/shoe.jpeg';
+import bed from './images/bed.jpeg';
+
+
+
+
+
+
 
 const Home = () => {
   const navigate = useNavigate();
@@ -299,7 +314,7 @@ const Home = () => {
 
 <div className="deal-box furniture-section">
   <h5>Starting ₹99 + 20% cashback on first order | Beauty & makeup</h5>
-            <a href="/products" className="see-all">See all offers</a>
+          <Link to="/products" className='see-all'>see all offers</Link>
 
   <div className="furniture-scroll">
     <div className="furniture-item">
@@ -341,6 +356,42 @@ const Home = () => {
   <div className="promo-item"><img src={d5} alt="Promo 5" /></div>
   <div className="promo-item"><img src={d6} alt="Promo 6" /></div>
 </div>
+<div className="deal-box furniture-section">
+  <h5>Furniture Deals</h5>
+          <Link to="/products" className='see-all'>see all offers</Link>
+
+  <div className="furniture-scroll">
+    <div className="furniture-item">
+      <img src={matress} alt="Cookware Sets" />
+    </div>
+    <div className="furniture-item">
+      <img src={tv} alt="Pans" />
+      
+    </div>
+    <div className="furniture-item">
+      <img src={office} alt="Wall Clock" />
+    </div>
+    <div className="furniture-item">
+      <img src={sofa} alt="Indoor Plants" />
+    </div>
+    <div className="furniture-item">
+      <img src={baby} alt="Pressure Cookers" />
+    </div>
+      <div className="furniture-item">
+      <img src={iron} alt="Pressure Cookers" />
+    </div>
+      <div className="furniture-item">
+      <img src={table} alt="Pressure Cookers" />
+    </div>
+      <div className="furniture-item">
+      <img src={shoe} alt="Pressure Cookers" />
+    </div>
+      <div className="furniture-item">
+      <img src={bed} alt="Pressure Cookers" />
+    </div>
+  </div>  
+</div>
+
 {/* Footer */}
  <footer className="footer-container">
       <div className="footer-top">
