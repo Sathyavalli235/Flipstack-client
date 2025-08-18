@@ -62,19 +62,26 @@ const Cart = () => {
       ) : (
         <>
           {cartItems.map((item) => (
-            <div key={item._id} className="cart-item">
-              <img src={item.product.image} alt={item.product.name} />
-              <div>
-                <h4>{item.product.name}</h4>
-                <p>Price: ₹{item.product.price}</p>
-                <div className="qty-controls">
-                  <button onClick={() => decreaseQty(item)}>-</button>
-                  <span>{item.product.quantity}</span>
-                  <button onClick={() => increaseQty(item)}>+</button>
-                </div>
-                <button onClick={() => removeFromCart(item._id)}>Remove</button>
-              </div>
-            </div>
+            <div className="cart-item" key={item._id}>
+  <img src={item.product.image} alt={item.product.name} />
+
+  <div className="cart-details">
+    <div className="cart-info">
+      <h4>{item.product.name}</h4>
+      <p>Price: ₹{item.product.price}</p>
+    </div>
+
+    <div className="cart-actions">
+      <div className="qty-controls">
+        <button onClick={() => decreaseQty(item)}>-</button>
+        <span>{item.product.quantity}</span>
+        <button onClick={() => increaseQty(item)}>+</button>
+      </div>
+      <button className="remove-btn" onClick={() => removeFromCart(item._id)}>Remove</button>
+    </div>
+  </div>
+</div>
+
           ))}
           <hr />
           <h3>Total: ₹{getTotalPrice().toFixed(2)}</h3>

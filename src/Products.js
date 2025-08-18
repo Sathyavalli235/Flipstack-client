@@ -256,7 +256,7 @@ const handleBuyNow = (product) => {
     },
      {
       id:25,
-      name:" boAt Lunar Discovery w/ 1.39,, Turn-by Navigation ",
+      name:" boAt Lunar Discovery w/ 1.39, Turn-by Navigation ",
       price:"₹1399",
       originalPrice:"₹2500",
       image:prod25,

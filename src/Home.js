@@ -65,10 +65,6 @@ import bed from './images/bed.jpeg';
 
 
 
-
-
-
-
 const Home = () => {
   const navigate = useNavigate();
 
