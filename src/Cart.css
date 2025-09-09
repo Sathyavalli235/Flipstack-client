@@ -1,77 +1,93 @@
-.cart-container {
-  max-width: 1000px;
-  margin: 40px auto;
+/* Cart page wrapper */
+.cart-page {
+  max-width: 800px;
+  margin: 0 auto;
   padding: 20px;
-  border: 1px solid #e0e0e0;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.cart-container h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 28px;
-  color: #333;
-}
-
-.cart-item {
+/* Cart items */
+.cart-page .cart-item {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #ddd;
-  padding: 15px 0;
-}
-
-.cart-item img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid #eee;
   border-radius: 10px;
-  margin-right: 20px;
+  background: #fff;
 }
 
-.cart-item h4 {
-  margin: 0;
-  font-size: 20px;
-  color: #444;
+.cart-page .cart-item img {
+  width: 100px;
+  height: auto;
+  border-radius: 8px;
+  margin-right: 15px;
 }
 
-.cart-item p {
-  margin: 5px 0;
-  font-size: 18px;
-  color: #777;
+.cart-page .cart-details {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.cart-item button {
-  margin-top: 10px;
-  padding: 8px 16px;
-  background-color: #ff4d4f;
-  color: white;
+/* Quantity and Remove buttons */
+.cart-page .qty-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cart-page .qty-btn {
+  background: #ff4d4d;
+  color: #fff;
   border: none;
-  border-radius: 5px;
+  padding: 6px 12px;
+  font-size: 18px;
+  border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: 0.2s;
 }
 
-.cart-item button:hover {
-  background-color: #d9363e;
+.cart-page .qty-btn:hover {
+  background: #e63e3e;
 }
 
-.cart-container hr {
-  margin: 30px 0;
-  border: none;
-  height: 1px;
-  background-color: #ccc;
-}
-
-.cart-container h3 {
-  text-align: right;
-  font-size: 24px;
-  color: #222;
-}
-
-.cart-container p {
+.cart-page .qty-display {
+  font-size: 16px;
+  font-weight: bold;
+  min-width: 24px;
   text-align: center;
+}
+
+.cart-page .remove-btn {
+  background: transparent;
+  border: 1px solid #ff4d4d;
+  color: #ff4d4d;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.cart-page .remove-btn:hover {
+  background: #ff4d4d;
+  color: #fff;
+}
+
+/* Center the Buy Now button */
+.cart-page .cart-buy-btn {
+  display: block;
+  margin: 20px auto 0; /* center horizontally, spacing on top */
+  padding: 12px 30px;
   font-size: 18px;
-  color: #666;
+  border: none;
+  border-radius: 8px;
+  background-color: #fa6338;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cart-page .cart-buy-btn:hover {
+  background-color: #e55320;
 }

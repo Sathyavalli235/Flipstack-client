@@ -10,6 +10,7 @@ import Account from './Account';
 import { useCart } from './CartContext'; 
 import Payment from './Payment';
 import './index.css';
+import flipstack from './images/flipstack.png';
 
 function App() {
   const { cartItems, clearCart, reloadCart } = useCart();
@@ -42,7 +43,11 @@ function App() {
     <div>
       <nav className="navbar navbar-expand-lg custom-navbar text-dark">
         <div className="container-fluid">
-          <Link className="navbar-brand fw-bold" to="/">FlipStack</Link>
+<Link className="navbar-brand fw-bold" to="/">
+  <img src={flipstack}  />
+  FlipStack
+</Link>
+
 
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span className="navbar-toggler-icon"></span>

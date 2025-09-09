@@ -51,8 +51,7 @@ border-radius: 6px;
 cursor: pointer;
 font-size: 16px;
 transition: background-color 0.3s ease;
-<<<<<<< HEAD
-=======
+
 }
 
 .contact-form button:hover {
@@ -64,7 +63,7 @@ background-color: #0056b3;
 padding: 20px;
 margin: 20px;
 }
->>>>>>> 3617eb93ac468cbe246963bb79644c1185d5bbfb
+
 }
 
 .contact-form button:hover {
